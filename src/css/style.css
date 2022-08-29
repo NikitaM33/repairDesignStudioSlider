@@ -1,0 +1,682 @@
+@import './variables.css';
+@import './libs/normalize.css';
+@import './components/all.css';
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:after {
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: var(--mainTransition);
+}
+
+a:hover {
+    color: var(--gold);
+}
+
+a:hover:after {
+    width: 100%;
+}
+
+a.activeLink {
+    color: var(--gold);
+}
+
+a.activeLink:after {
+    width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.wrapper {
+    max-width: 1438px;
+    width: calc(100vw - 100px);
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header__logo a,
+.header__navigation li a,
+.header__phone a,
+.footer__phone a {
+    font-weight: 300;
+    font-size: var(--O87);
+    text-transform: uppercase;
+}
+
+.header,
+.footer {
+    padding: 1.5rem 0;
+    background: var(--mainBlack);
+}
+
+.header__container,
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo a,
+.footer__logo a {
+    color: var(--gold);
+}
+
+.header__navigation ul,
+.footer__navigation ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__navigation li,
+.footer__navigation li {
+    margin-right: 1vw;
+}
+
+.header__navigation li:last-child,
+.footer__navigation li:last-child {
+    margin-right: 0;
+}
+
+.header__navigation li a,
+.footer__navigation li a {
+    color: var(--white);
+    transition: var(--mainTransition);
+}
+
+.header__navigation li a:hover,
+.footer__navigation li a:hover {
+    color: var(--gold);
+}
+
+.header__phone,
+.footer__phone {
+    display: flex;
+    align-items: center;
+}
+
+.header__phone a,
+.footer__phone a {
+    color: var(--gold);
+    text-decoration: underline;
+    transition: var(--mainTransition);
+}
+
+.header__phone a:hover,
+.footer__phone a:hover {
+    color: var(--white);
+}
+
+.header__phone button,
+.footer__phone button {
+    margin-left: 2.5rem;
+}
+
+
+
+
+
+
+
+
+.mainButton,
+.borderedButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 15rem;
+    height: 2.5rem;
+    padding: 0.9rem 1.5rem 0.6rem 1.5rem;
+    font-weight: 400;
+    font-size: var(--R7);
+    text-transform: uppercase;
+    border-radius: var(--R1);
+    transition: var(--mainTransition);
+}
+
+.mainButton {
+    color: var(--white);
+    background: var(--gold);
+    box-shadow: var(--btnShadow);
+}
+
+.mainButton:hover {
+    background: var(--goldHover);
+}
+
+.mainButton:active {
+    background: var(--goldActive);
+}
+
+.borderedButton {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.borderedButton:hover {
+    background: var(--whiteHover);
+}
+
+.borderedButton:active {
+    background: var(--whiteActive);
+}
+
+.onlineControl__container,
+.repairTypes__container,
+.clients__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.repairTypes__container,
+.clients__container {
+    padding: 8rem 0;
+}
+
+.repairTypes h3,
+.clients__container h4 {
+    color: var(--mainBlack);
+}
+
+.onlineControl__decor,
+.repairTypes__decor {
+    position: relative;
+}
+
+.onlineControl__decor:before,
+.onlineControl__decor:after,
+.repairTypes__decor:before,
+.repairTypes__decor:after {
+    position: absolute;
+    content: '';
+    width: 2rem;
+    height: 1px;
+    background: var(--gold);
+}
+
+.onlineControl__decor:before,
+.repairTypes__decor:before {
+    top: 1rem;
+    left: -3rem;
+}
+
+.onlineControl__decor:after,
+.repairTypes__decor:after {
+    top: 1rem;
+    right: -3rem;
+}
+
+.onlineControl h4,
+.repairTypes h3,
+.clients__container h4,
+.questions__form h4,
+.questions__coordinates p {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.request__form,
+.questions__requestForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.onlineControl__fieldset,
+.request__fieldset,
+.questions__fieldset,
+.onlineControl__input,
+.request__input,
+.questions__input {
+    border: none;
+    outline: none;
+}
+
+.onlineControl__name,
+.request__name,
+.questions__name {
+    font-size: var(--O8);
+}
+
+.onlineControl__input::placeholder,
+.request__input::placeholder,
+.questions__input:placeholder {
+    font-size: var(--O87);
+}
+
+.onlineControl__agreement,
+.request__agreement,
+.questions__agreement {
+    position: relative;
+    display: flex;
+}
+
+.onlineControl__fancyCheckbox,
+.request__fancyCheckbox,
+.questions__fancyCheckbox {
+    position: absolute;
+    display: flex;
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-left: -1.5rem;
+    background: var(--gold);
+    border-radius: var(--R1);
+    cursor: pointer;
+}
+
+.onlineControl__fancyCheckbox:after,
+.request__fancyCheckbox:after,
+.questions__fancyCheckbox:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 0.6rem;
+    height: 0.6rem;
+    background-image: url(../assets/img/check.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: var(--mainTransition);
+}
+
+.onlineControl__agreement input,
+.request__agreement input,
+.questions__agreement input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.onlineControl__agreement input:checked + .onlineControl__fancyCheckbox:after,
+.request__agreement input:checked + .request__fancyCheckbox:after,
+.questions__agreement input:checked + .questions__fancyCheckbox:after  {
+    opacity: 1;
+}
+
+.onlineControl__agreement input:focus + .onlineControl__fancyCheckbox,
+.request__agreement input:focus + .request__fancyCheckbox:after,
+.questions__agreement input:focus + .questions__fancyCheckbox:after {
+    box-shadow: 0 0 5px var(--subText);
+}
+
+.request__form,
+.questions__requestForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.8rem 0 0.8rem;
+    color: var(--white);
+    background: var(--mainBlack);
+}
+
+.request__userData,
+.questions__userData {
+    width: 75%;
+}
+
+.request__fieldset,
+.questions__fieldset {
+    margin: 0 0 3rem 0;
+    padding: 0;
+}
+
+.request__fieldset:nth-child(3),
+.questions__fieldset:nth-child(3) {
+    margin: 0 0 1.5rem 0;
+}
+
+.request__name,
+.questions__name {
+    color: var(--whiteActive);
+}
+
+.request__input,
+.questions__input {
+    width: 100%;
+    padding: 0.5rem 0;
+    font-weight: 400;
+    color: var(--white);
+    background: var(--mainBlack);
+    border-bottom: 1px solid var(--whiteHover) !important;
+}
+
+.request__agreement,
+.questions__agreement {
+    font-size: var(--O87);
+    margin: 0 0 2rem 1.5rem;
+}
+
+.request__submit,
+.questions__submit {
+    width: 12rem;
+}
+
+.projects__slider {
+    position: relative;
+    width: 100%;
+    height: 36rem;
+}
+
+.projects__roomExample .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 800ms ease;
+    overflow: hidden;
+}
+
+.projects__roomExample  .image.active {
+    opacity: 1;
+}
+
+.projects__roomExample img,
+.repairStyles__roomExample img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media screen and (max-width: 1270px) {
+    .projects__container {
+        flex-direction: column;
+    }
+
+    .projects__descr {
+        padding: 5rem 0 0;
+    }
+
+    .projects__descr h3 {
+        margin: 0 auto;
+        text-align: center;
+        font-size: var(--mobileBtnText);
+    }
+
+    .projects__descr p {
+        margin-top: 3rem;
+        text-align: center;
+        font-size: var(--mobileText);
+    }
+
+    .projects__parametrs,
+    .projects__citys {
+        display: none;
+    }
+
+    .projects__arrowsContainer {
+        top: 50%;
+        left: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobileScreen {
+        display: block;
+        margin: 0 0 4rem 0;
+    }
+
+    .mobileScreen span {
+        font-size: var(--mobileBtnText);
+    }
+
+    .mobileScreen p {
+        font-size: var(--mobileText);
+    }
+}
+
+@media screen and (max-width: 1185px) {
+    .header__requestBtn,
+    .footer__requestBtn {
+        display: none;
+    }
+
+    .onlineControl {
+        background: var(--mainBlack);
+    }
+
+    .onlineControl__container h4 {
+        font-size: var(--mobileBtnText);
+    }
+
+    .onlineControl__video {
+        width: 100vw;
+    }
+
+    .onlineControl__playBtn {
+        width: 9vw;
+        height: 10.2vw;
+    }
+
+    .onlineControl__hr {
+        height: 2px;
+    }
+
+    .onlineControl__text p {
+        color: var(--white);
+    }
+
+    .onlineControl__form {
+        flex-direction: column;
+    }
+
+    .onlineControl__userData {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    .onlineControl__name,
+    .onlineControl__input,
+    .onlineControl__agreement {
+        font-size: var(--mobileText);
+        color: var(--white);
+    }
+
+    .onlineControl__input {
+        width: 28rem;
+        margin: 0 0 3rem 0;
+        border-bottom: 1px solid var(--white) !important;
+    }
+
+    .onlineControl__input::placeholder {
+        color: var(--greyText);
+    }
+
+    .onlineControl__fieldset:nth-child(2) input {
+        margin: 0 0 0 0;
+    }
+
+    .onlineControl__agreement {
+        padding: 1.5rem 0 0 2.3rem;
+    }
+
+    .onlineControl__submit {
+        width: 100%;
+        height: 4rem;
+        margin: 0 0 -2rem 0;
+    }
+
+    .mainButton {
+        max-width: 100%;
+        z-index: 2;
+    }
+
+    .repairTypes__types {
+        flex-direction: column;
+    }
+
+    .card {
+        align-items: baseline;
+        margin: 0 0 4rem;
+    }
+
+    .request {
+        display: none;
+    }
+
+    .repairStyles {
+        background: var(--mainBlack);
+    }
+
+    .repairStyles__container {
+        flex-direction: column;
+    }
+
+    .repairStyles__styleExamples {
+        margin: -10rem 0 3rem;
+        padding: 0;
+    }
+
+    .repairStyles__styleExamples h3 {
+        max-width: 15rem;
+        margin: 0 auto;
+        font-size: var(--mobileBtnText);
+        text-align: center;
+    }
+
+    .repairStyles__styleExamples ul {
+        display: none;
+    }
+
+    .repairStyles__styleGalery {
+        display: none;
+    }
+
+    .repairStyles__sliderContainer {
+        display: flex;
+        justify-content: center;
+        margin: 0rem 0 5rem;
+    }
+
+    .repairStyles__slider {
+        position: relative;
+        width: 38rem;
+    }
+
+    .repairStyles__roomExample {
+        height: 100%;
+    }
+
+    .clients {
+        display: none;
+    }
+
+    .questions {
+        background: var(--mainBlack);
+        margin: 0;
+    }
+
+    .questions__requestForm {
+        margin: 0;
+    }
+
+    .questions__submit {
+        width: 100%;
+        height: 3rem;
+    }
+
+    .questions__contancts {
+        flex-direction: column-reverse;
+        margin-top: 2rem;
+    }
+
+    .questions__map {
+        margin: 0 0 0;
+    }
+
+    .footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .header__navigation ul {
+        display: none;
+    }
+
+    .bunner__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bunner__bannerText p {
+        font-size: var(--mobileText);
+    }
+
+    .bunner__callToActionBtn {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .bunner__calculateBtn,
+    .mainButton,
+    .borderedButton  {
+        max-width: 100%;
+        width: 100%;
+        height: 5rem;
+        margin: 1.5rem 0;
+        font-size: var(--mobileBtnText);
+    }
+
+    .onlineControl__input {
+        width: 23rem;
+    }
+
+    .card__body  {
+        width: 50vw;
+    }
+
+    .projects__arrowslider {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .repairStyles__sliderContainer {
+        margin: 0rem 0 2rem;
+    }
+
+    .questions__map {
+        width: 100%;
+    }
+}

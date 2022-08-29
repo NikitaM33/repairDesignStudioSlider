@@ -1,0 +1,43 @@
+:root {
+    --mainBlack: #131313;
+    --text: #363636;
+    --subText: #36363680;
+    --greyText: #959595;
+    --grey: #36363660;
+    --gold: #E3B873;
+    --goldHover: #e3b873e0;
+    --goldActive: #e7bf7e;
+    --white: #FFFFFF;
+    --whiteHover: #ffffff83;
+    --whiteActive: #ffffff9d;
+    --lightGrey: #cecece;
+    --superLightGrey: #00000008;
+    --linerDarkToner: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%);
+
+
+    /* Text sizes */
+    --I1: 1.1rem;
+    --O87: 0.87rem;
+    --O8: 0.8rem;
+
+    --mobileText: 1.12rem;
+    --mobileBtnText: 1.3rem;
+
+
+    /* Radiuses */
+    --R7: 0.7rem;
+    --R1: 0.1rem;
+
+
+    /* Transitions */
+    --mainTransition: all 0.3s;
+
+
+    /* Borders */
+    --articleBorder: 1px solid #E2E2E2;
+
+
+    /* Shadows */
+    --btnShadow: 0 0 15px rgba(227, 184, 115, 0.4);
+    --darkShadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

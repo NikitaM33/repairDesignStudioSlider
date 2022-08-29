@@ -1,0 +1,100 @@
+.request {
+    position: relative;
+    padding: 7.3rem 0;
+}
+
+.request__buildingBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    z-index: -1;
+}
+
+.request__buildingBg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.request__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.request__reasons {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 0 14rem;
+}
+
+.request__reasons ul li {
+    display: flex;
+    align-items: center;
+    padding: 2.8rem 0;
+    font-size: var(--O87);
+}
+
+.request__reasons p {
+    max-width: 20rem;
+    margin-left: 0.5rem;
+    color: var(--text);
+}
+
+.request__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    padding-top: 0.1rem;
+    background: var(--gold);
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    color: var(--white);
+    border: 8px solid var(--white);
+    border-radius: 50%;
+    box-shadow: 0 5px 15px var(--superLightGrey);
+}
+
+.request__requestForm {
+    flex: 0 0 40%;
+}
+
+.request__callBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.request__form p {
+    max-width: 13rem;
+    margin: 0 0 2.5rem 0;
+    text-align: center;
+}
+
+.request__discount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.4rem;
+}
+
+.request__pigIcon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+    padding: 0.9rem 0.8rem;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: var(--btnShadow);
+}
+
+.request__discount p {
+    max-width: 13rem;
+    color: var(--gold);
+    text-shadow: 0 0 10px var(--superLightGrey);
+}

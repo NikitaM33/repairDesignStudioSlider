@@ -1,0 +1,46 @@
+.bunner {
+    padding: 12.1rem 0 13rem 0;
+    background-image: url(../../assets/img/mainBanner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bunner__bannerText {
+    width: 27rem;
+}
+
+.bunner__bannerText h1,
+.bunner__bannerText span {
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+.bunner__bannerText h1 {
+    margin: 0 0 1rem 0;
+    color: var(--white);
+}
+
+.bunner__bannerText span {
+    color: var(--gold);
+}
+
+.bunner__bannerText p {
+    margin: 0 0 2rem 0;
+    color: var(--white);
+    font-weight: 300;
+    font-size: var(--I1);
+    line-height: 2rem;
+}
+
+.bunner__callToActionBtn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bunner__calculateBtn {
+    margin-right: 1.1rem;
+}

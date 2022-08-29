@@ -1,0 +1,109 @@
+.onlineControl__container {
+    margin: -21rem 0 0 0;
+}
+
+.onlineControl h4 {
+    color: var(--white);
+}
+
+.onlineControl__video {
+    position: relative;
+    width: 51rem;
+}
+
+.onlineControl__playBtn {
+    position: absolute;
+    top: 42%;
+    left: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4vw;
+    height: 4.2vw;
+    padding: 0 0 0 5px;
+    background: var(--gold);
+    border-radius: 50%;
+    transform: translate(-50%, -50%), scale(1);
+    cursor: pointer;
+    transition: var(--mainTransition);
+}
+
+.onlineControl__playBtn:hover {
+    transform: scale(1.1);
+}
+
+.onlineControl__videoWindow {
+    width: 100%;
+}
+
+.onlineControl__videoWindow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.onlineControl__hr {
+    width: 3.4rem;
+    height: 1px;
+    margin: 0 auto 2rem auto;
+    background: var(--gold);
+    border: none;
+    outline: none;
+}
+
+.onlineControl__text {
+    max-width: 42.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.onlineControl__text p {
+    text-align: center;
+    line-height: 2rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.onlineControl__form {
+    display: flex;
+    flex-direction: row;
+}
+
+.onlineControl__userData {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 69%;
+    margin-bottom: 2rem;
+    font-size: var(--O87);
+}
+
+.onlineControl__name {
+    color: var(--subText);
+}
+
+.onlineControl__input {
+    width: 14rem;
+    margin-right: 2rem;
+    padding: 0.5rem 0;
+    background: transparent;
+    color: var(--text);
+    border-bottom: 1px solid var(--grey) !important;
+}
+
+.onlineControl__input::placeholder {
+    color: var(--text);
+}
+
+.onlineControl__agreement {
+    align-items: center;
+    padding: 1.5rem;
+    color: var(--text);
+}
+
+.onlineControl__submit {
+    width: 10rem;
+}

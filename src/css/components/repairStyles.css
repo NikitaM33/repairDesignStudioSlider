@@ -1,0 +1,97 @@
+.repairStyles {
+    background-image: url(../../assets/img/ReparStylesBanner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 5rem 0 0 0;
+}
+
+.repairStyles__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.repairStyles__styleExamples {
+    padding: 6rem 0 0 0;
+}
+
+.repairStyles__styleExamples h3 {
+    max-width: 13rem;
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+.repairStyles__styleExamples li a {
+    position: relative;
+    color: var(--white);
+    line-height: 2.5rem;
+    transition: var(--mainTransition);
+}
+
+.repairStyles__styleExamples li a:hover {
+    color: var(--gold);
+}
+
+.repairStyles__styleGalery {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(21rem, 1fr));
+    grid-template-rows: repeat(12, 2rem);
+    grid-gap: 2.5rem;
+}
+
+.img1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 9;
+}
+
+.img2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 13;
+}
+
+.img3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.img4 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 12;
+}
+
+.repairStyles__image {
+    position: absolute;
+    top: -6rem;
+    right: 0;
+    bottom: -3rem;
+    width: 100%;
+    margin: 0rem 0 8.5rem 0;
+}
+
+.img2,
+.img4 {
+    margin: 0 0 0 0;
+}
+
+.repairStyles__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.repairStyles__sliderContainer {
+    display: none;
+}
