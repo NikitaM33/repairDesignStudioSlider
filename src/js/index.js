@@ -36,6 +36,9 @@ function initSlider() {
   const dots = document.querySelector(".projects__dots");
   const projectTitle = document.querySelector(".project__title");
   const projectsCitys = document.querySelector(".projects__citys");
+  const projectsArrowslider = document.querySelectorAll(
+    ".projects__arrowslider"
+  );
 
   let repairTitle;
 
@@ -86,19 +89,25 @@ function initSlider() {
 
   function initArrows() {
     arrows.forEach((arrow) => {
-      arrow.addEventListener("click", () => {
-        let curNumber = +roomExample.querySelector(".active").dataset.index;
-        let nextNumber;
-
-        if (arrow.classList.contains("left")) {
-          nextNumber = curNumber <= 0 ? sliderData.length - 1 : curNumber - 1;
-        } else {
-          nextNumber = curNumber === sliderData.length - 1 ? 0 : curNumber + 1;
-        }
-
-        moveSlide(nextNumber);
-      });
+      arrow.addEventListener("click", () => {changeSlideNum(arrow)});
     });
+
+    projectsArrowslider.forEach((projArrow) => {
+      projArrow.addEventListener("click", () => {changeSlideNum(projArrow)});
+    });
+  }
+
+  function changeSlideNum(arrow) {
+    let curNumber = +roomExample.querySelector(".active").dataset.index;
+    let nextNumber;
+
+    if (arrow.classList.contains("left")) {
+      nextNumber = curNumber <= 0 ? sliderData.length - 1 : curNumber - 1;
+    } else {
+      nextNumber = curNumber === sliderData.length - 1 ? 0 : curNumber + 1;
+    }
+
+    moveSlide(nextNumber);
   }
 
   function initDots() {
@@ -153,7 +162,7 @@ function initSlider() {
     sliderTitles.forEach((sliderTitle) => {
       repairTitle = sliderData[num].title;
 
-      let decrText = `
+      let descrText = `
       <div class="projects__descrRow">
         <div class="project__part">
           <span class="project__descrName">City:</span>
@@ -176,7 +185,7 @@ function initSlider() {
       </div>
     `;
 
-    projectTitle.innerHTML = decrText;
+      projectTitle.innerHTML = descrText;
     });
   }
 }
